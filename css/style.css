@@ -1,0 +1,708 @@
+@font-face{
+	font-family: 'raleway';
+	src: url('../fonts/Raleway-reg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'raleway';
+	src: url('../fonts/Raleway-bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'robotoslab';
+	src: url('../fonts/RobotoSlab-reg.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+body {
+    font-family: 'raleway';
+    font-size: 15px;
+    background-color: #f3f3f3;
+}
+
+.center {
+    text-align: center;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+button.blue {
+    padding: 15px 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #fff;
+    background-color: #33c7fd;
+    font-family: 'raleway';
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+button.blue:hover {
+    background-color: #13b0e9;
+}
+
+button.blue:active {
+    background-color: #64d6ff;
+}
+
+.hamburger {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 15px;
+    border-top: 2px solid #0d3351;
+    border-bottom: 2px solid #0d3351;
+}
+
+.hamburger:before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    width: 100%;
+    border-top: 2px solid #0d3351;
+}
+
+.flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 70px;
+    background-color: #f20542;
+    position: absolute;
+    top: -10px;
+    right: 45px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.flag:before, .flag:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 20px solid  #f20542; /* высота треугольников */
+    position: absolute;
+    bottom: -20px;   
+}
+
+.flag:before {
+    border-right: 45px solid transparent; /* ширина треугольника */
+    left: 0px;
+}
+
+.flag:after {
+    border-left: 45px solid transparent; /* ширина треугольника */
+    right: 0px;
+}
+
+.flag.blue {
+    background-color: #33c7fd;    
+}
+
+.flag.blue:before, .flag.blue:after {
+    border-top: 20px solid  #33c7fd;
+}
+
+
+.header {
+    width: 100%;
+    height: 650px;
+    background: url(../img/bg-top.jpg) center center no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.header .menu-pop {
+    position: relative;
+}
+
+.header .menu-pop .button {
+    height: 30px;
+    width: 40px;
+}
+
+.header .menu-pop .links {
+    position: absolute;
+    top: 30px;
+    width: 420px;
+    height: 415px;
+    background-color: #0d3351;
+    display: none;
+}
+
+.header .menu-pop .links ul {
+    list-style-type: none;
+    margin: 65px 45px;
+    font-family: 'robotoslab';
+    font-size: 18px;
+}
+
+.header .menu-pop .links ul li {
+    margin-bottom: 25px;
+}
+
+.header .menu-pop .links ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .menu-pop .links ul a:hover {
+    color: #33c7fd;
+    text-decoration: underline;
+}
+
+.header .menu-top {
+    list-style-type: none;
+}
+
+.header .menu-top li {
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.header .menu-top li:after {
+    content: url("../img/arrow2.png");
+    position: absolute;
+    top: -3px;
+    right: -15px;
+}
+
+.header .rub:before {
+    content: url("../img/rub.png");
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
+
+.header .user:before {
+    content: url("../img/user.png");
+    position: absolute;
+    top: 0px;
+    left: -20px;
+}
+
+.header .rub,
+.header .user {
+    margin-left: 20px;
+}
+
+.header .phone {
+    font-weight: bold;
+}
+
+.header .support {
+    font-size: 12px;
+}
+
+.header .logo {
+    margin-top: 20px;
+}
+
+.header .menu div:first-child {
+    margin-left: 0;
+}
+
+.header h1 {
+    font-family: 'robotoslab';
+    font-size: 104px;
+    color: #0d3351;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 104px;
+    margin-top: -50px;   
+}
+
+.header h1 .min {
+    font-size: 36px; 
+    text-transform: none;
+}
+
+.header button {
+    margin-top: 50px;
+}
+
+.header .dot-line {
+    position: absolute;
+    left: 50%;
+    width: 164px;
+    margin-top: -40px;
+    margin-left: -90px;
+}
+
+
+.main h2.catalog {
+    font-family: 'robotoslab';
+    color: #0d3351;
+    font-weight: normal;
+    font-size: 36px;
+    margin-top: 90px;
+}
+
+.main p.filter {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.main p.filter .by {
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.main p.filter .by:after {
+    content: url("../img/arrow2.png");
+    position: absolute;
+    top: -2px;
+    right: -20px;
+}
+
+.main .cruise {
+    float: left;
+    width: calc(50% - 30px);
+    min-height: 40px;
+    margin: 10px 15px;
+    background-color: #fff;
+}
+
+.main .cruise .img {
+    position: relative;
+}
+
+.main .cruise1 .img {
+    height: 432px;
+}
+
+.main .cruise2 .img,
+.main .cruise3 .img {
+    height: 113px;
+}
+
+.main .cruise4 .img,
+.main .cruise5 .img {
+    height: 215px;
+}
+
+
+.main .cruise .img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.main .cruise .about {
+    margin: 22px 35px;
+}
+
+.main .cruise .about .title {
+    height: 24px;
+    margin-bottom: 13px;
+}
+
+.main .cruise .about .text {
+    height: 46px;
+}
+
+.main .cruise .about .price {
+    height: 44px;
+}
+
+.main .cruise .about h2 {
+    font-family: 'robotoslab';
+    font-size: 18px;
+    color: #00a2dd;
+}
+
+.main .cruise .about h2:after {
+    content: url("../img/arrow1.png");
+    padding-left: 15px;
+}
+
+.main .cruise .about p {
+    padding-bottom: 5px;
+}
+
+.main .cruise .about .price {
+    font-family: 'robotoslab';
+    font-size: 30px;
+    color: #0d3351;
+    margin-top: 15px;
+}
+
+.main .cruise .about .price .old {
+    margin-left: 30px;
+    font-size: 18px;
+    color: #0d3351;
+    opacity: 0.55;
+    text-decoration: line-through;
+}
+
+
+.footer {
+    background-color: #fff;
+}
+
+.footer .block {
+    float: left;
+    width: 262px;
+    margin: 30px 15px;
+}
+
+.footer .block p {
+    margin-bottom: 10px;
+}
+
+.footer .menu-bottom {
+    list-style-type: none;
+}
+
+.footer .menu-bottom li {
+    margin-bottom: 10px;
+}
+
+.footer .menu-bottom a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer .menu-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer .menu-bottom a:visited {
+    color: #000;
+}
+
+.footer .block .connect div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-color: #0d3351;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.footer .phone {
+    font-weight: bold;
+}
+
+.footer .support {
+    font-size: 12px;
+}
+
+
+/* modal */
+.fade {
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.overlay .popup {
+    position: fixed;
+    z-index: 4;
+    left: 50%;
+    top: 80px;
+    width: 850px;
+    height: 690px;
+    background-color: #fff;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.overlay .popup-close {
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    cursor: pointer;
+    font-size: 35px;
+    color: #8699a8;
+    font-weight: 300;
+}
+
+.overlay .popup .img,
+.overlay .popup .about {
+    float: left;
+    width: 360px;
+    margin-top: 115px;
+}
+
+.overlay .popup .img {
+    margin-left: 50px;
+}
+
+.overlay .popup .about {
+    margin-left: 30px;
+}
+
+.overlay .popup .img .img-big {
+    width: 100%;
+    display: none;
+}
+
+.overlay .popup .img .img-big:first-child {
+    width: 100%;
+    display: block;
+}
+
+.overlay .popup .img .img-big img,
+.overlay .popup .img .img-min img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay .popup .img .img-min {
+    float: left;
+    width: 80px;
+    height: 54px;
+    margin-right: 13px;
+}
+
+.overlay .popup .img .img-min.active {
+    width: 76px;
+    height: 50px;
+    border: 2px solid gainsboro;
+}
+
+.overlay .popup .img .img-min:last-child {
+    margin-right: 0px;
+}
+
+.overlay .popup .about .title {
+    margin-bottom: 30px;
+}
+
+.overlay .popup .about h2 {
+    font-family: 'robotoslab';
+    font-size: 18px;
+    color: #00a2dd;
+}
+
+.overlay .popup .about p {
+    line-height: 22px;
+    padding-bottom: 5px;
+}
+
+.overlay .popup .about .price {
+    font-family: 'robotoslab';
+    font-size: 30px;
+    color: #0d3351;
+    margin-top: 15px;
+}
+/* /modal */
+
+
+/* media */
+@media (min-width: 750px) and (max-width: 1279px) {
+    .flag {
+        right: 30px;
+    }
+
+    .container {
+        width: 750px;
+    }
+
+    .header {
+        height: 600px;
+    }
+
+    .header h1 {
+        font-size: 72px;
+        line-height: 72px;
+        margin-top: -25px;   
+    }
+    
+    .header h1 .min {
+        font-size: 28px;
+    }
+
+    .header button {
+        margin-top: 20px;
+    }
+
+    .main h2.catalog {
+        margin-top: 50px;        
+    }
+
+    .main .cruise .img {
+        height: 270px;
+    }
+
+    .main .cruise .about .title {
+        height: 70px;
+        margin-bottom: -10px;
+    }
+    
+    .main .cruise .about .text {
+        height: 60px;
+    }
+    
+    .main .cruise .about .price {
+        height: 50px;
+    }
+
+    .main .cruise5 {
+        display: none;
+    }
+
+    .footer .block {
+        float: left;
+        width: 250px;
+        margin: 30px 0;
+    }
+
+    .footer .block:first-child {
+        width: 220px;
+    }
+
+    .footer .block:nth-child(3) {
+        display: none;
+    }
+}
+
+/* mobile */
+@media (max-width: 749px) {
+    .mob-inv {
+        display: none;
+    }
+
+    .container {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+
+    .header {
+        height: 585px;
+    }
+
+    .header .logo {
+        margin-top: 0;
+    }
+
+    .header h1 {
+        font-size: 50px;
+        line-height: 50px;
+        margin-top: -25px;   
+    }
+    
+    .header h1 .min {
+        font-size: 20px;
+    }
+
+    .header button {
+        margin-top: 30px;
+    }
+
+    .main .cruise {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .main .cruise .img {
+        width: 100%;
+        height: 225px;
+    }
+
+    .main .cruise .about .title {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .main .cruise .about .text {
+        height: auto;
+    }
+    
+    .main .cruise .about .price {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .block {
+        float: none;
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .footer .block .connect {
+        width: 160px;
+        margin: 0 auto;
+    }
+}
+/* /media */
